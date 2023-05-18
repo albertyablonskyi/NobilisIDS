@@ -1,0 +1,9 @@
+# Ignore CICflowmeter-py
+cicflowmeter-py/
+
+# Ignore datasets
+# datasets/
+
+# Ignore models folder (for now)
+# models/
+
