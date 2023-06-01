@@ -119,7 +119,7 @@ def ask_delete_existing_file(csv_file):
             os.remove(csv_file)
             break
         elif choice.lower() == 'n':
-            sys.exit(0)
+            break
         else:
             print("Invalid choice. Please enter 'y' or 'n'.")
 

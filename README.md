@@ -48,19 +48,18 @@ The **train.py** script is used to train the IDS classifier model. It follows th
    python train.py
    ```
 
-### Making Predictions (predict.py)
+### Starting the IDS (nobilisIDS.py)
+The **nobilisIDS.py** script is used to monitor network activity and to predict possible cyberattacks. It follows the steps below:
 
-The **predict.py** script is used to make predictions using the trained model. It follows the steps below:
+- Start Intrusion Detection System:
+    ```sh
+    python nobilisIDS.py
+    ```
+- Choose model by entering it's number
 
-- Define the dataset and model paths:
-   ```sh
-   csv_file_path = 'datasets/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv'
-   model_file_path = 'models/ddos.pkl'
-   ```
-- To make predictions, run the following command:
-   ```sh
-   python predict.py
-   ```
+- Enter interface name you want to listen (you can find available interfaces by using command **ifconfig**)
+
+It will start the CICFlowMeter subprocess, and then program will read the .csv file containing captured flows and then predict whether this flow is attack or not.
 
 ### Datasets
 
