@@ -7,3 +7,6 @@ cicflowmeter-py/
 # Ignore models folder (for now)
 # models/
 
+# Ignore .csv file
+wlp58s0.csv
+
