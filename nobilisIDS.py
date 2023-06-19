@@ -113,15 +113,18 @@ def stop_subprocesses():
     sys.exit(0)
 
 def ask_delete_existing_file(csv_file):
-    while True:
-        choice = input(f"CSV file '{csv_file}' already exists. Do you want to delete it? (y/n): ")
-        if choice.lower() == 'y':
-            os.remove(csv_file)
-            break
-        elif choice.lower() == 'n':
-            break
-        else:
-            print("Invalid choice. Please enter 'y' or 'n'.")
+    if os.path.exists(csv_file):
+        while True:
+            choice = input(f"CSV file '{csv_file}' already exists. Do you want to delete it? (y/n): ")
+            if choice.lower() == 'y':
+                os.remove(csv_file)
+                break
+            elif choice.lower() == 'n':
+                break
+            else:
+                print("Invalid choice. Please enter 'y' or 'n'.")
+    else:
+        print(f"CSV file '{csv_file}' does not exist.")
 
 
 def main():
